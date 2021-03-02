@@ -3,7 +3,7 @@ import {
 } from "./util.js";
 
 import {
-   CarouselCtrl
+   CarouselController
 } from "./carousel.ctrl.js";
 
 import {
@@ -19,7 +19,7 @@ const requestInfoForSection1_banner = "event";
 let count = 0;
 
 const playViewMore = () => new RequestData(requestUrlForSection2, requestInfoForSection2_view_more, 'view_more_basic');
-const playCarousel_hot = () => new RequestData(requestUrlForSection1, requestInfoForSection1_carousel_hot, 'carousel_hot');
+const playHotCarousel = () => new RequestData(requestUrlForSection1, requestInfoForSection1_carousel_hot, 'carousel_hot');
 const playCarousel = () => new RequestData(requestUrlForSection1, requestInfoForSection1_carousel, 'carousel');
 const loadBannerImg = () => new RequestData(requestUrlForSection1, requestInfoForSection1_banner, 'banner');
 
@@ -28,15 +28,15 @@ const ctrlCarouselBtn = () => {
    const slideNextBtn = _.$(".evt_main .next");
    const slidePrevBtn = _.$(".evt_main .prev");
    const value = 'carousel';
-   return new CarouselCtrl(slidePrevBtn, slideNextBtn, slideArea, value);
+   return new CarouselController(slidePrevBtn, slideNextBtn, slideArea, value);
 }
 
-const ctrlCarouselBtn_hot = () => {
+const ctrlHotCarouselBtn = () => {
    const slideArea = _.$('.hot_deal_list');
    const slideNextBtn = _.$(".slide_hot_deal .next");
    const slidePrevBtn = _.$(".slide_hot_deal .prev");
    const value = 'carousel_hot';
-   return new CarouselCtrl(slidePrevBtn, slideNextBtn, slideArea, value);
+   return new CarouselController(slidePrevBtn, slideNextBtn, slideArea, value);
 }
 
 const viewMoreUrlSetting = () => {
@@ -57,9 +57,9 @@ function init() {
    loadBannerImg();
    ctrlViewMoreBtn();
    playCarousel();
-   playCarousel_hot();
+   playHotCarousel();
    ctrlCarouselBtn();
-   ctrlCarouselBtn_hot();
+   ctrlHotCarouselBtn();
 }
 
 init();

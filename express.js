@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require("express");//익스프레스를 호출해줍니다.
 const hbs = require("express-handlebars");
 const cors = require("cors");
 
-const server = express();
+const server = express(); //익스프레스를 server라는 변수에 담아줍니다.
 server.use(cors());
 server.engine("hbs", hbs({
    extname: "hbs",
@@ -28,9 +28,6 @@ server.listen(3000, (err) => {
    if (err) return console.log("err");
    console.log("the server is listening on port 3000");
 });
-
-
-
 
 //?Express환경구축
 //npm install express

@@ -39,7 +39,7 @@ export class CarouselMaker {
       }
    }
 
-   makeBasicTpl_hot() {
+   makeBasicHotTpl() {
       this.slideArea = _.$('.hot_deal_list');
 
       for (let i = 0; i < this.titleArr.length; i++) {
@@ -66,7 +66,7 @@ export class CarouselMaker {
    }
 
    checkArrLength() {
-      (this.imgUrlArr.length === 3) ? this.makeBasicTpl(): this.makeBasicTpl_hot();
+      (this.imgUrlArr.length === 3) ? this.makeBasicTpl(): this.makeBasicHotTpl();
    }
 
    init() {

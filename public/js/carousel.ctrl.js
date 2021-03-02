@@ -2,7 +2,7 @@ import {
    _
 } from "./util.js";
 
-export class CarouselCtrl {
+export class CarouselCtroller {
    constructor(prev, next, area, value) {
       this.prev = prev;
       this.next = next;
